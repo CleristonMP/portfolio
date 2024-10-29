@@ -67,11 +67,11 @@ const CustomNavbar: React.FC = () => {
               Sobre
             </Nav.Link>
             <Nav.Link
-              href="#tech"
+              href="#skills"
               className="mp-navlink"
-              onClick={() => handleLinkClick("tech")}
+              onClick={() => handleLinkClick("skills")}
             >
-              Techs
+              Skills
             </Nav.Link>
             <Nav.Link
               href="#courses"

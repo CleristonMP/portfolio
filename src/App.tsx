@@ -1,10 +1,11 @@
 import "./styles/globals.css";
 import CustomNavbar from "./components/Navbar";
-import CustomCarousel from "./components/Carousel";
 import Footer from "./components/Footer";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
 import Home from "./pages/Home";
+import Courses from "./pages/Courses";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -14,19 +15,10 @@ function App() {
       </header>
       <main className="container mt-5">
         <Home />
-        <div className="row">
-          <div className="col-12 text-center">
-            <h1>Bem-vindo ao Meu Portfólio</h1>
-            <p>Veja meus principais projetos abaixo:</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-8 col-sm-12 mx-auto">
-            <CustomCarousel />
-          </div>
-        </div>
+        <Projects />
         <About />
         <Skills />
+        <Courses />
       </main>
       <Footer />
     </>

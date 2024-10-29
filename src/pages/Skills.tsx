@@ -1,5 +1,5 @@
 import React from "react";
-import techImgs from "../assets/imgs/techs";
+import techsData from "../utils/techsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import "../styles/Skills.css";
@@ -22,8 +22,8 @@ const Skills: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6">
             <div className="row">
-              {techImgs &&
-                techImgs.map((img) => (
+              {techsData &&
+                techsData.map((img) => (
                   <div
                     key={img.id}
                     className="d-flex justify-content-center col-lg-4 col-md-4 col-sm-6 mb-5"

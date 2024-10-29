@@ -1,5 +1,4 @@
 import React from "react";
-import aboutImg from "../assets/imgs/about.svg";
 import "../styles/About.css";
 
 const About: React.FC = () => {
@@ -8,7 +7,7 @@ const About: React.FC = () => {
       <div className="row justify-content-start align-items-center">
         <div className="col-md-6">
           <div className="about_img">
-            <img src={aboutImg} alt="Imagem sobre mim" className="img-fluid" />
+            <img src="/assets/imgs/about.svg" alt="Imagem sobre mim" className="img-fluid" />
           </div>
         </div>
         <div className="col-md-6">
