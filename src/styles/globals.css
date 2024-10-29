@@ -1,0 +1,106 @@
+/* Global Styles */
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Titles */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #7830bd;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.custom-btn {
+  background-image: linear-gradient(
+      to right,
+      #4458dc 0%,
+      #854fee 100%
+    ),
+    radial-gradient(circle at top left, #4458dc, #854fee);
+  border: 2px solid transparent !important;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  transition: all 0.5s ease-in-out !important;
+  letter-spacing: 0px;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 46px !important;
+  outline: none;
+  text-transform: uppercase;
+  background-clip: content-box, border-box;
+}
+
+.custom-btn span {
+  color: #fff;
+}
+
+.custom-btn:hover {
+  background-image: linear-gradient(#fff, #fff);
+  border: 2px solid #854fee !important;
+  box-shadow: none;
+  background-clip: border-box;
+  transition: all 0.5s ease-in-out !important;
+}
+
+.custom-btn:hover span {
+  color: #222222;
+}
+
+.custom-btn span {
+  padding: 0 42px;
+}
+
+/* Media Query para dispositivos pequenos (smartphones) */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+
+  .carousel-caption {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+/* Media Query para dispositivos muito pequenos */
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-caption {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.875rem;
+  }
+}

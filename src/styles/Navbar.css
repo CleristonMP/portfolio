@@ -1,0 +1,46 @@
+.header_area {
+  width: 100%;
+  background: #fff;
+}
+
+.main_menu {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.no-shadow {
+  box-shadow: none;
+  transition: all 1s ease 0s;
+}
+
+.nav-shadow {
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  transition: all 1s ease 0s;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler svg {
+  width: 25px;
+  height: auto;
+}
+
+.navbar-toggler svg path {
+  fill: #fff;
+}
+
+.navbar-nav .mp-navlink.nav-link {
+  color: #7830bd !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  font-weight: 700;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 700;
+}

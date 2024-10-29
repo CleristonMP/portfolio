@@ -1,19 +1,89 @@
-import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import React, { useEffect, useState } from "react";
+import { Navbar, Nav } from "react-bootstrap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import useScreenSize from "../hooks/useScreenSize";
+import logo from "../assets/imgs/logo.svg";
+import "../styles/Navbar.css";
 
 const CustomNavbar: React.FC = () => {
+  const [windowScrollY, setWindowScrollY] = useState(0);
+  const screenSize = useScreenSize();
+
+  const handleLinkClick = (section: string) => {
+    scrollToSection(section);
+  };
+
+  const scrollToSection = (section: string) => {
+    const element = document.getElementById(section);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    const handleScroll = () => setWindowScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
-      <Navbar.Brand href="#home">Meu Portfólio</Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#about">Sobre</Nav.Link>
-          <Nav.Link href="#projects">Projetos</Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
+    <header className="header_area" id="header">
+      <Navbar
+        className={`navbar navbar-expand-md fixed-top ${
+          screenSize.width >= 768
+            ? `bg-white px-sm-3 ${
+                windowScrollY >= 130 ? "nav-shadow" : "no-shadow"
+              }`
+            : "navbar-dark bg-dark px-sm-3"
+        }`}
+        expand="lg"
+      >
+        <Navbar.Brand href="#home">
+          <img src={logo} alt="Cleriston" width={140} />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <FontAwesomeIcon icon={faBars} />
+        </Navbar.Toggle>
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+          <Nav className="ml-auto">
+            <Nav.Link
+              href="#home"
+              className="mp-navlink"
+              onClick={() => handleLinkClick("home")}
+            >
+              Home
+            </Nav.Link>
+            <Nav.Link
+              href="#projects"
+              className="mp-navlink"
+              onClick={() => handleLinkClick("projects")}
+            >
+              Projetos
+            </Nav.Link>
+            <Nav.Link
+              href="#about"
+              className="mp-navlink"
+              onClick={() => handleLinkClick("about")}
+            >
+              Sobre
+            </Nav.Link>
+            <Nav.Link
+              href="#tech"
+              className="mp-navlink"
+              onClick={() => handleLinkClick("tech")}
+            >
+              Techs
+            </Nav.Link>
+            <Nav.Link
+              href="#courses"
+              className="mp-navlink"
+              onClick={() => handleLinkClick("courses")}
+            >
+              Cursos
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </header>
   );
 };
 

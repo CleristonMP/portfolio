@@ -1,8 +1,10 @@
+import "./styles/globals.css";
 import CustomNavbar from "./components/Navbar";
 import CustomCarousel from "./components/Carousel";
 import Footer from "./components/Footer";
-import "./styles/global.css";
 import About from "./pages/About";
+import Skills from "./pages/Skills";
+import Home from "./pages/Home";
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <CustomNavbar />
       </header>
       <main className="container mt-5">
+        <Home />
         <div className="row">
           <div className="col-12 text-center">
             <h1>Bem-vindo ao Meu Portfólio</h1>
@@ -23,6 +26,7 @@ function App() {
           </div>
         </div>
         <About />
+        <Skills />
       </main>
       <Footer />
     </>

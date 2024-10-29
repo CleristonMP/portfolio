@@ -1,0 +1,158 @@
+.skills_area {
+  padding-top: 100px;
+}
+
+.skills_title {
+  font-weight: 700;
+}
+
+.single-tech-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-tech-item img {
+  height: 100px;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+.single-tech-item img:hover {
+  filter: drop-shadow(15px 15px 3px rgba(118, 85, 225, 0.3));
+}
+
+.my-info {
+  padding: 50px 10px;
+  background-color: #faf8ff;
+  text-align: center;
+  position: relative;
+}
+
+.my-info::before {
+  background: none;
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -50px;
+  height: 175px;
+  width: 175px;
+}
+
+.txt-large {
+  color: #854fee;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  position: relative;
+  z-index: 9;
+}
+
+.txt-small {
+  text-align: left;
+  margin-left: 15px;
+  letter-spacing: 0.05em;
+}
+
+.contact {
+  text-align: left;
+}
+
+.phone-icon {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.contact p {
+  color: #854fee;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.contact h3 {
+  font-size: 1rem;
+}
+
+@media (min-width: 576px) {
+  .skills_title {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .my-info {
+    padding: 30px;
+  }
+
+  .my-info::before {
+    background: url("../assets/imgs/my-info-bg.png") no-repeat;
+  }
+
+  .txt-large {
+    font-size: 100px;
+  }
+
+  .txt-small {
+    font-size: 1.5rem;
+  }
+
+  .phone-icon {
+    font-size: 3.75rem;
+  }
+
+  .contact h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .skills_title {
+    font-size: 2.25rem;
+  }
+
+  .my-info {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .txt-small {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .tech_area {
+    padding-top: unset;
+  }
+
+  .skills_title {
+    line-height: 1.5;
+  }
+
+  .single-tech-item {
+    margin-bottom: 50px;
+  }
+
+  .my-info {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .txt-large {
+    font-size: 5.5em;
+  }
+
+  .txt-small {
+    font-size: 1.25rem;
+  }
+
+  .contact h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .my-info {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

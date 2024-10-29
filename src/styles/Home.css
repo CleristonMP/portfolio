@@ -1,0 +1,149 @@
+.home-content {
+  padding: 0 15px;
+}
+
+.home-content h3 {
+  font-size: 1.65rem;
+  position: relative;
+}
+
+.home-content h1 {
+  margin: 25px 0;
+  font-size: 2.75em;
+  line-height: 1.15;
+}
+
+.home-content h5 {
+  font-size: 1.65rem;
+}
+
+.home-content .custom-btn,
+.home-content .cv-btn {
+  display: none;
+}
+
+.home-right-img {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .home-content {
+    padding: 0;
+  }
+
+  .home-content h3 {
+    font-size: 2rem;
+  }
+
+  .home-content h3:after {
+    content: "";
+    width: 380px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 24%;
+    background: #7830bd;
+  }
+}
+
+@media (min-width: 768px) {
+  .home-content h3 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h3:after {
+    left: 38%;
+  }
+
+  .home-content h1 {
+    font-size: 4rem;
+    line-height: 1;
+  }
+
+  .home-content h5 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .home-content .custom-btn {
+    display: unset;
+    margin-right: 20px;
+  }
+
+  .home-content .cv-btn {
+    display: unset;
+    background-image: linear-gradient(#fff, #fff),
+      radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px double #854fee;
+    color: #222;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 46px;
+    outline: none;
+    text-transform: uppercase;
+    background-origin: border-box;
+  }
+
+  .home-content .cv-btn:hover {
+    background-image: linear-gradient(
+        to right,
+        #4458dc 0%,
+        #854fee 100%
+      ),
+      radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px solid transparent;
+    color: #fff;
+    box-shadow: none;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .cv-btn span {
+    padding: 0 42px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home-area {
+    align-items: start;
+    padding-top: 100px;
+  }
+
+  .home-content h3:after {
+    width: 320px;
+    left: 28%;
+  }
+
+  .home-right-img {
+    display: unset;
+  }
+
+  .home-right-img img {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+    border-radius: 60% 40%;
+    opacity: 0.9;
+    transition: all 1s ease-in-out 0.25s;
+  }
+
+  .home-right-img img:hover {
+    opacity: 1;
+    border-radius: 40% 60%;
+    box-shadow: 5px 5px 60px 10px #854fee;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home-content h3:after {
+    width: 610px;
+    left: 23%;
+    z-index: -1;
+  }
+
+  .home-right-img img {
+    margin-top: 10px;
+  }
+}
