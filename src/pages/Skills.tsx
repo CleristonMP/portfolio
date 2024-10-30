@@ -12,10 +12,10 @@ const Skills: React.FC = () => {
   };
 
   return (
-    <section id="skills" className="skills_area">
+    <section id="skills" className="skills-area">
       <div className="container">
         <div className="mb-4 mb-sm-5">
-          <h2 className="text-center text-uppercase mb-0 skills_title">
+          <h2 className="text-center text-uppercase mb-0 skills-title">
             Habilidades
           </h2>
         </div>

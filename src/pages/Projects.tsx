@@ -18,7 +18,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section className="projects" id="projects">
+    <section id="projects" className="projects-area">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

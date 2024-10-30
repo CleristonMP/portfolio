@@ -14,7 +14,7 @@
 }
 
 .nav-shadow {
-  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
+  box-shadow: 0px 10px 30px var(--primary-shadow);
   transition: all 1s ease 0s;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .navbar-toggler svg path {
-  fill: #fff;
+  fill: var(--white-color);
 }
 
 .nav-link {
@@ -41,7 +41,7 @@
 }
 
 .navbar-nav .mp-navlink.nav-link {
-  color: #7830bd !important;
+  color: var(--primary-color) !important;
   font-weight: 500;
 }
 
@@ -55,11 +55,10 @@
 
 @media (min-width: 768px) {
   .header-area .main-menu {
-    background-color: #f4f4f9 !important;
+    background-color: var(--bg-color) !important;
   }
 
   .nav-shadow {
-    box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3);
     transition: all 1s ease 0s;
   }
 }

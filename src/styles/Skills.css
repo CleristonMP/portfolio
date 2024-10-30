@@ -1,8 +1,8 @@
-.skills_area {
+.skills-area {
   padding-top: 100px;
 }
 
-.skills_title {
+.skills-title {
   font-weight: 700;
 }
 
@@ -19,12 +19,12 @@
 }
 
 .single-tech-item img:hover {
-  filter: drop-shadow(15px 15px 3px rgba(118, 85, 225, 0.3));
+  filter: drop-shadow(15px 15px 3px var(--primary-shadow));
 }
 
 .my-info {
   padding: 50px 10px;
-  background-color: #faf8ff;
+  background-color: var(--bg-my-info);
   text-align: center;
   position: relative;
 }
@@ -40,7 +40,7 @@
 }
 
 .txt-large {
-  color: #854fee;
+  color: var(--secondary-color);
   font-size: 5rem;
   font-weight: 700;
   line-height: 1;
@@ -64,7 +64,7 @@
 }
 
 .contact p {
-  color: #854fee;
+  color: var(--secondary-color);
   text-transform: uppercase;
   margin-bottom: 5px;
 }
@@ -74,7 +74,7 @@
 }
 
 @media (min-width: 576px) {
-  .skills_title {
+  .skills-title {
     font-size: 2rem;
     font-weight: 700;
   }
@@ -105,7 +105,7 @@
 }
 
 @media (min-width: 768px) {
-  .skills_title {
+  .skills-title {
     font-size: 2.25rem;
   }
 
@@ -120,11 +120,11 @@
 }
 
 @media (min-width: 992px) {
-  .tech_area {
+  .skills-area {
     padding-top: unset;
   }
 
-  .skills_title {
+  .skills-title {
     line-height: 1.5;
   }
 

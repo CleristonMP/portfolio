@@ -1,41 +1,45 @@
-.about_area {
+.about-area {
   padding-top: 100px;
 }
 
-.about_img img {
+.about-img img {
   width: 100%;
 }
 
-.about_title {
+.about-title {
   font-size: 1.75rem;
   font-weight: 700;
   line-height: 1.25;
   margin-bottom: 15px;
   text-transform: uppercase;
-  color: var(--bg-dark);
 }
 
-.about_content p {
+.about-content p {
   margin-bottom: 20px;
-  color: var(--txt-gray);
+  color: var(--txt-light-gray);
+}
+
+p.see-more-btn {
+  color: var(--see-more-btn-color);
+  cursor: pointer;
 }
 
 @media (min-width: 576px) {
-  .about_area {
+  .about-area {
     padding-top: unset;
   }
 
-  .about_title {
+  .about-title {
     font-size: 2rem;
   }
 }
 
 @media (min-width: 992px) {
-  .about_area .about_img {
+  .about-area .about-img {
     display: unset;
   }
 
-  .about_title {
+  .about-title {
     line-height: 1.5;
   }
 }

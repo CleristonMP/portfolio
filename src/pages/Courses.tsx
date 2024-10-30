@@ -15,12 +15,12 @@ const Courses: React.FC = () => {
   };
 
   return (
-    <section id="courses" className="courses_area">
+    <section id="courses" className="courses-area">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center">
-            <div className="courses_intro">
-              <h2 className="courses_title">Cursos realizados</h2>
+            <div className="courses-intro">
+              <h2 className="courses-title">Cursos realizados</h2>
               <p>
                 Abaixo estão listados alguns dos principais cursos que já
                 concluí.
@@ -31,7 +31,7 @@ const Courses: React.FC = () => {
         <div className="row">
           {certificatesData.map((cert: Certificate) => (
             <div key={cert.id} className="col-lg-4 col-md-6">
-              <div className="course_item">
+              <div className="course-item">
                 <div className="cert-img" onClick={() => handleShowModal(cert)}>
                   <img src={cert.certSrc} alt={cert.caption} />
                 </div>

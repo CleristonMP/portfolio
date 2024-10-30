@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import Fade from "react-bootstrap/Fade";
 import "../styles/ScrollToTopButton.css";
 
 const ScrollToTopButton: React.FC = () => {
@@ -27,17 +28,19 @@ const ScrollToTopButton: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      {isVisible && (
+      <Fade 
+        in={isVisible}
+        timeout={500}
+        unmountOnExit
+      >
         <button
           onClick={scrollToTop}
-          className={`scroll-to-top ${isVisible ? 'show' : ''}`}
+          className={`scroll-to-top ${isVisible ? "show" : ""}`}
           aria-label="Scroll to top"
         >
           <FontAwesomeIcon icon={faArrowUp} />
         </button>
-      )}
-    </div>
+      </Fade>
   );
 };
 
