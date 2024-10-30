@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
     <footer className="bg-dark text-white text-center py-4 footer">
       <div className="container">
         <div className="footer-logo mb-3">
-          <a href="#">
+          <a href="#home">
             <img src="/assets/imgs/logo.svg" alt="Cleriston" width={60} height={60} />
           </a>
           <h4>Contact Me</h4>
