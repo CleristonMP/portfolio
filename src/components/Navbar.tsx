@@ -3,7 +3,6 @@ import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useScreenSize from "../hooks/useScreenSize";
-import logo from "../assets/imgs/logo.svg";
 import "../styles/Navbar.css";
 
 const CustomNavbar: React.FC = () => {
@@ -26,9 +25,9 @@ const CustomNavbar: React.FC = () => {
   }, []);
 
   return (
-    <header className="header_area" id="header">
+    <header className="header-area" id="header">
       <Navbar
-        className={`navbar navbar-expand-md fixed-top ${
+        className={`navbar navbar-expand-md fixed-top main-menu ${
           screenSize.width >= 768
             ? `bg-white px-sm-3 ${
                 windowScrollY >= 130 ? "nav-shadow" : "no-shadow"
@@ -38,7 +37,7 @@ const CustomNavbar: React.FC = () => {
         expand="lg"
       >
         <Navbar.Brand href="#home">
-          <img src={logo} alt="Cleriston" width={140} />
+          <img src="/assets/imgs/logo.svg" alt="Cleriston" width={140} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <FontAwesomeIcon icon={faBars} />

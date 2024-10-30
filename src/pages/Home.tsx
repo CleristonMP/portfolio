@@ -1,5 +1,4 @@
 import React from "react";
-import myAvatar from "../assets/imgs/my-avatar.jpg";
 import "../styles/Home.css";
 
 const Home: React.FC = () => {
@@ -29,7 +28,7 @@ const Home: React.FC = () => {
           </div>
           <div className="col-md-5">
             <div className="home-right-img">
-              <img src={myAvatar} alt="Cleriston avatar" />
+              <img src="/assets/imgs/my-avatar.jpg" alt="Cleriston avatar" />
             </div>
           </div>
         </div>

@@ -6,13 +6,12 @@ import Skills from "./pages/Skills";
 import Home from "./pages/Home";
 import Courses from "./pages/Courses";
 import Projects from "./pages/Projects";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   return (
     <>
-      <header>
-        <CustomNavbar />
-      </header>
+      <CustomNavbar />
       <main className="container mt-5">
         <Home />
         <Projects />
@@ -21,6 +20,7 @@ function App() {
         <Courses />
       </main>
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
