@@ -3,6 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useScreenSize from "../hooks/useScreenSize";
+import ThemeSwitch from "./ThemeSwitch";
 import "../styles/Navbar.css";
 
 const CustomNavbar: React.FC = () => {
@@ -79,6 +80,7 @@ const CustomNavbar: React.FC = () => {
             >
               Cursos
             </Nav.Link>
+            <ThemeSwitch />
           </Nav>
         </Navbar.Collapse>
       </Navbar>

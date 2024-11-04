@@ -8,9 +8,9 @@ const Home: React.FC = () => {
         <div className="row align-items-center">
           <div className="col-md-7">
             <div className="home-content">
-              <h3 className="text-uppercase">Hello</h3>
-              <h1 className="text-uppercase">I am Cleriston Pereira</h1>
-              <h5 className="text-uppercase">Full stack web developer</h5>
+              <h3 className="text-uppercase">Olá</h3>
+              <h1 className="text-uppercase">Eu sou Cleriston Pereira</h1>
+              <h5 className="text-uppercase">Desenvolvedor Full stack web e mobile</h5>
               <div className="button-group d-flex align-items-center">
                 <button type="button" className="btn btn-primary custom-btn">
                   <span>Hire Me</span>

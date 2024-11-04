@@ -3,6 +3,7 @@
   --bg-footer: #343a40;
   --bg-card: #ededff;
   --bg-my-info: #f9f9f9;
+  --switch-bg-color: #f5f5f5;
   
   --text-color: #333333;
   --txt-light-gray: #555555;
@@ -32,6 +33,7 @@
   --bg-footer: #0d0d0d;
   --bg-card: #232323;
   --bg-my-info: #2b2b2b;
+  --switch-bg-color: #222;
 
   --text-color: #e0e0e0;
   --txt-light-gray: #aaaaaa;
@@ -46,7 +48,7 @@
   --primary-shadow: rgba(187, 134, 252, 0.3);
 
   --btn-gradient-1: #3a4fd0;
-  --btn-text-dark: #e5e5e5;
+  --btn-text-dark: #060606;
 
   --card-shadow-color: rgba(50, 50, 50, 0.3);
 
@@ -63,6 +65,7 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
+  transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 section {
@@ -168,7 +171,7 @@ h5 {
 
 
 /* Dark Mode Switch */
-.theme-switch {
+/* .theme-switch {
   position: relative;
   display: inline-block;
   width: 48px;
@@ -211,4 +214,4 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(24px);
-}
+} */
