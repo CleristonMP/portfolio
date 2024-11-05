@@ -5,13 +5,14 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useScreenSize from "../hooks/useScreenSize";
 import ThemeSwitch from "./ThemeSwitch";
 import { useTranslation } from "react-i18next";
-import "../styles/Navbar.css";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { useSectionContext } from "../context/SectionContext";
+import "../styles/Navbar.css";
 
 const MyNavbar: React.FC = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
   const screenSize = useScreenSize();
-
+  const { activeSection } = useSectionContext();
   const { t } = useTranslation();
 
   const handleLinkClick = (section: string) => {
@@ -25,6 +26,7 @@ const MyNavbar: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => setWindowScrollY(window.scrollY);
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -51,28 +53,38 @@ const MyNavbar: React.FC = () => {
           <Nav className="ml-auto">
             <Nav.Link
               href="#projects"
-              className="mp-navlink"
+              className={`mp-navlink ${
+                activeSection === "projects" ? "active" : ""
+              }`}
               onClick={() => handleLinkClick("projects")}
             >
               {t("navigation.projects")}
             </Nav.Link>
             <Nav.Link
               href="#about"
-              className="mp-navlink"
+              className={`mp-navlink ${
+                activeSection === "about" ? "active" : ""
+              }`}
               onClick={() => handleLinkClick("about")}
             >
               {t("navigation.about")}
             </Nav.Link>
+
             <Nav.Link
               href="#skills"
-              className="mp-navlink"
+              className={`mp-navlink ${
+                activeSection === "skills" ? "active" : ""
+              }`}
               onClick={() => handleLinkClick("skills")}
             >
               {t("navigation.skills")}
             </Nav.Link>
+
             <Nav.Link
               href="#courses"
-              className="mp-navlink"
+              className={`mp-navlink ${
+                activeSection === "courses" ? "active" : ""
+              }`}
               onClick={() => handleLinkClick("courses")}
             >
               {t("navigation.courses")}

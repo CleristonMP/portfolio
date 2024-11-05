@@ -12,11 +12,11 @@
     "buttons": {
       "hireMe": "Contrate-me",
       "downloadCV": "Baixar CV"
-    },
-    "projects": {
-      "title": "Bem-vindo ao Meu Portfólio",
-      "description": "Veja meus principais projetos abaixo:"
     }
+  },
+  "projects": {
+    "title": "Bem-vindo ao Meu Portfólio",
+    "description": "Veja meus principais projetos abaixo:"
   },
   "about": {
     "title": "Deixa eu me apresentar",
