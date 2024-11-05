@@ -4,11 +4,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import useScreenSize from "../hooks/useScreenSize";
 import ThemeSwitch from "./ThemeSwitch";
+import { useTranslation } from "react-i18next";
 import "../styles/Navbar.css";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const CustomNavbar: React.FC = () => {
+const MyNavbar: React.FC = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
   const screenSize = useScreenSize();
+
+  const { t } = useTranslation();
 
   const handleLinkClick = (section: string) => {
     scrollToSection(section);
@@ -46,41 +50,35 @@ const CustomNavbar: React.FC = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ml-auto">
             <Nav.Link
-              href="#home"
-              className="mp-navlink"
-              onClick={() => handleLinkClick("home")}
-            >
-              Home
-            </Nav.Link>
-            <Nav.Link
               href="#projects"
               className="mp-navlink"
               onClick={() => handleLinkClick("projects")}
             >
-              Projetos
+              {t("navigation.projects")}
             </Nav.Link>
             <Nav.Link
               href="#about"
               className="mp-navlink"
               onClick={() => handleLinkClick("about")}
             >
-              Sobre
+              {t("navigation.about")}
             </Nav.Link>
             <Nav.Link
               href="#skills"
               className="mp-navlink"
               onClick={() => handleLinkClick("skills")}
             >
-              Skills
+              {t("navigation.skills")}
             </Nav.Link>
             <Nav.Link
               href="#courses"
               className="mp-navlink"
               onClick={() => handleLinkClick("courses")}
             >
-              Cursos
+              {t("navigation.courses")}
             </Nav.Link>
             <ThemeSwitch />
+            <LanguageSwitcher />
           </Nav>
         </Navbar.Collapse>
       </Navbar>
@@ -88,4 +86,4 @@ const CustomNavbar: React.FC = () => {
   );
 };
 
-export default CustomNavbar;
+export default MyNavbar;

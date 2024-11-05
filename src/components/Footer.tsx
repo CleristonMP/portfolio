@@ -7,9 +7,12 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import "../styles/Footer.css"
+import { useTranslation } from "react-i18next";
+import "../styles/Footer.css";
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
+
   const getFullYear = () => new Date().getFullYear();
 
   return (
@@ -17,9 +20,14 @@ const Footer: React.FC = () => {
       <div className="container">
         <div className="footer-logo mb-3">
           <a href="#home">
-            <img src="/assets/imgs/logo.svg" alt="Cleriston" width={60} height={60} />
+            <img
+              src="/assets/imgs/logo.svg"
+              alt="Cleriston"
+              width={60}
+              height={60}
+            />
           </a>
-          <h4>Contact Me</h4>
+          <h4>{t("footer.contact")}</h4>
         </div>
 
         <div className="footer-social mb-3">
@@ -60,9 +68,7 @@ const Footer: React.FC = () => {
           </a>
         </div>
 
-        <p className="mb-0">
-          &copy; {getFullYear()} CleristonMP - Todos os direitos reservados.
-        </p>
+        <p className="mb-0">{t("footer.copyright", { year: getFullYear() })}</p>
       </div>
     </footer>
   );

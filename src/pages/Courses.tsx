@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import certificatesData, { Certificate } from "../utils/certificatesData";
 import CertificateModal from "../components/CertificateModal";
+import { useTranslation } from "react-i18next";
 import "../styles/Courses.css";
 
 const Courses: React.FC = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(
-    null
-  );
+  const [selectedCertificate, setSelectedCertificate] =
+    useState<Certificate | null>(null);
+
+  const { t } = useTranslation();
 
   const handleShowModal = (cert: Certificate) => {
     setSelectedCertificate(cert);
@@ -20,11 +22,8 @@ const Courses: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-lg-8 text-center">
             <div className="courses-intro">
-              <h2 className="courses-title">Cursos realizados</h2>
-              <p>
-                Abaixo estão listados alguns dos principais cursos que já
-                concluí.
-              </p>
+              <h2 className="courses-title">{t("courses.title")}</h2>
+              <p>{t("courses.sectionDescription")}</p>
             </div>
           </div>
         </div>
@@ -37,18 +36,26 @@ const Courses: React.FC = () => {
                 </div>
                 <h4>{cert.caption}</h4>
                 <p className="completion-date">
-                  Data de conclusão: {cert.completionDate}
+                  {t("courses.completionDate", { date: cert.completionDate })}
                 </p>
                 <p className="course-load">
-                  Carga horária: {cert.courseLoad} horas
+                  {t("courses.courseLoad", { hours: cert.courseLoad })}
                 </p>
                 <details>
-                  <summary>Veja mais</summary>
+                  <summary>{t("courses.seeMore")}</summary>
                   <dl>
                     {cert.topics.map((topic, index) => (
                       <div key={index}>
-                        <dt>{topic.subject}</dt>
-                        <dd>{topic.description}</dd>
+                        <dt>
+                          {t("courses.topicSubject", {
+                            subject: topic.subject,
+                          })}
+                        </dt>
+                        <dd>
+                          {t("courses.topicDescription", {
+                            description: topic.description,
+                          })}
+                        </dd>
                       </div>
                     ))}
                   </dl>

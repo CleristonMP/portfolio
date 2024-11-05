@@ -1,0 +1,55 @@
+{
+  "navigation": {
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "courses": "Courses"
+  },
+  "home": {
+    "greeting": "Hello",
+    "name": "I'm Cleriston Pereira",
+    "profession": "Full stack web and mobile developer",
+    "buttons": {
+      "hireMe": "Hire me",
+      "downloadCV": "Get CV"
+    }
+  },
+  "projects": {
+    "title": "Welcome to My Portfolio",
+    "description": "Check out my main projects below:"
+  },
+  "about": {
+    "title": "Let me introduce myself",
+    "introduction": "Hi! My name is Cleriston and I'm a web and mobile developer with over 5 years of experience. Throughout my career, I've developed various projects ranging from mobile apps to complex web platforms.",
+    "skills": "Currently, I develop applications in <0>Java</0> (backend) and <1>JavaScript</1> (frontend), as well as <2>HTML</2> and <3>CSS</3>. I love working with modern technologies like <4>React, TypeScript</4> and <5>Spring Boot</5>, and I am always learning and improving my skills. I also develop mobile applications with <6>Ionic</6> and <7>Jetpack Compose (Kotlin)</7>.",
+    "background": "I've always had an affinity for IT, even though I started my career in the port industry. Even as a Naval Technical Inspector, I was also responsible for assembling and maintaining computers, LAN networks, and developing administrative solutions. I decided to change careers and dedicate myself to the area that always caught my attention and that aligns more with my vocation.",
+    "experience": "With the knowledge acquired, I developed the website of the company where I work. In addition, over the past 5 years, I've had the opportunity to work as a freelancer, which has allowed me to collaborate with a variety of clients and companies. I enjoy the challenge of understanding each client's needs and transforming those needs into a functional and well-presented product.",
+    "callToAction": "If you're looking for someone to help with your next project, I'd be happy to collaborate. Get in touch and let's talk!",
+    "buttons": {
+      "seeMore": "See more...",
+      "seeLess": "See less...",
+      "downloadCV": "Get CV"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "experienceYears": "Years of Experience",
+    "contact": {
+      "label": "Get in touch",
+      "phone": "+55 98 9 8199 9361"
+    }
+  },
+  "courses": {
+    "title": "Courses completed",
+    "sectionDescription": "Below are some of the main courses I've completed.",
+    "completionDate": "Completion date: {{date}}",
+    "courseLoad": "Course load: {{hours}} hours",
+    "seeMore": "See more",
+    "topicSubject": "{{subject}}",
+    "topicDescription": "{{description}}"
+  },
+  "footer": {
+    "contact": "contact me",
+    "copyright": "© {{year}} CleristonMP - All rights reserved."
+  }
+}

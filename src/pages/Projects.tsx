@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal";
 import projectsData, { Project } from "../utils/projectsData";
+import { useTranslation } from "react-i18next";
 import "../styles/Projects.css";
 
 const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [showModal, setShowModal] = useState(false);
+
+  const { t } = useTranslation();
 
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
@@ -23,8 +26,8 @@ const Projects: React.FC = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="projects-title text-center">
-              <h2>Bem-vindo ao Meu Portfólio</h2>
-              <p>Veja meus principais projetos abaixo:</p>
+              <h2>{t("projects.title")}</h2>
+              <p>{t("projects.description")}</p>
             </div>
           </div>
         </div>

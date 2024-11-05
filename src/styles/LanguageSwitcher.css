@@ -1,0 +1,20 @@
+.lang-switcher-ctr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.lang-switcher-ctr button {
+  border: none;
+  margin: 0;
+  padding: 1px;
+  background-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .lang-switcher-ctr {
+    justify-content: center;
+    margin-left: 0;
+  }
+}

@@ -2,9 +2,12 @@ import React from "react";
 import techsData from "../utils/techsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 import "../styles/Skills.css";
 
 const Skills: React.FC = () => {
+  const { t } = useTranslation();
+
   const getExperienceYears = () => {
     const initialDate = new Date("2019-12-01").getTime();
     const today = Date.now();
@@ -16,7 +19,7 @@ const Skills: React.FC = () => {
       <div className="container">
         <div className="mb-4 mb-sm-5">
           <h2 className="text-center text-uppercase mb-0 skills-title">
-            Habilidades
+            {t("skills.title")}
           </h2>
         </div>
         <div className="row justify-content-center">
@@ -29,10 +32,7 @@ const Skills: React.FC = () => {
                     className="d-flex justify-content-center col-lg-4 col-md-4 col-sm-6 mb-5"
                   >
                     <div className="single-tech-item">
-                      <img
-                        src={img.imgSrc}
-                        alt={img.caption}
-                      />
+                      <img src={img.imgSrc} alt={img.caption} />
                     </div>
                   </div>
                 ))}
@@ -42,15 +42,15 @@ const Skills: React.FC = () => {
             <div className="my-info">
               <div className="d-flex align-items-center mb-5">
                 <span className="txt-large">{getExperienceYears()}</span>
-                <span className="txt-small">Years Experience</span>
+                <span className="txt-small">{t("skills.experienceYears")}</span>
               </div>
               <div className="contact d-flex align-items-center">
                 <div>
                   <FontAwesomeIcon icon={faPhone} className="phone-icon" />
                 </div>
                 <div className="ms-3">
-                  <p>contact me</p>
-                  <h3>+55 98 9 8199 9361 </h3>
+                  <p>{t("skills.contact.label")}</p>
+                  <h3>{t("skills.contact.phone")}</h3>
                 </div>
               </div>
             </div>
