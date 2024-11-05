@@ -74,6 +74,7 @@ section {
   justify-content: center;
   max-width: 1200px !important;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 /* Títulos */

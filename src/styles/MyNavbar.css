@@ -36,6 +36,10 @@
   fill: var(--white-color);
 }
 
+.navbar-brand, .nav-link {
+  cursor: pointer;
+}
+
 .nav-link {
   padding: 10px;
 }

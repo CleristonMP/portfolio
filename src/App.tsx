@@ -10,8 +10,6 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 import { useEffect } from "react";
-import { SectionProvider } from "./context/SectionContext";
-import ObserverSection from "./components/ObserverSection";
 
 function App() {
   useEffect(() => {
@@ -21,31 +19,15 @@ function App() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <SectionProvider>
-        <MyNavbar />
-        <main className="container mt-5">
-          <ObserverSection id="home">
-            <Home />
-          </ObserverSection>
-
-          <ObserverSection id="projects">
-            <Projects />
-          </ObserverSection>
-
-          <ObserverSection id="about">
-            <About />
-          </ObserverSection>
-
-          <ObserverSection id="skills">
-            <Skills />
-          </ObserverSection>
-
-          <ObserverSection id="courses">
-            <Courses />
-          </ObserverSection>
-        </main>
-        <Footer />
-      </SectionProvider>
+      <MyNavbar />
+      <main className="container mt-5">
+        <Home />
+        <Projects />
+        <About />
+        <Skills />
+        <Courses />
+      </main>
+      <Footer />
       <ScrollToTopButton />
     </I18nextProvider>
   );

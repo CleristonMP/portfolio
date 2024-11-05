@@ -6,27 +6,68 @@ import useScreenSize from "../hooks/useScreenSize";
 import ThemeSwitch from "./ThemeSwitch";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { useSectionContext } from "../context/SectionContext";
-import "../styles/Navbar.css";
+import "../styles/MyNavbar.css";
 
 const MyNavbar: React.FC = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
+  const [activeSection, setActiveSection] = useState<string>("home");
   const screenSize = useScreenSize();
-  const { activeSection } = useSectionContext();
   const { t } = useTranslation();
 
+  const sections = ["home", "projects", "about", "skills", "courses"];
+
   const handleLinkClick = (section: string) => {
-    scrollToSection(section);
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setActiveSection(section);
+      const newUrl = `${window.location.origin}/#${section}`;
+      window.history.pushState(null, "", newUrl);
+    }
   };
 
-  const scrollToSection = (section: string) => {
-    const element = document.getElementById(section);
-    if (element) element.scrollIntoView({ behavior: "smooth" });
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition < 50) {
+      // Quando estiver bem próximo ao topo, ativa "Home" e atualiza a URL
+      setActiveSection("home");
+      const newUrl = `${window.location.origin}/#home`;
+      window.history.pushState(null, "", newUrl);
+    } else {
+      sections.forEach((section) => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+            setActiveSection(section);
+            const newUrl = `${window.location.origin}/#${section}`;
+            window.history.pushState(null, "", newUrl);
+          }
+        }
+      });
+    }
+    setWindowScrollY(scrollPosition);
   };
+
+  // const handleScroll = () => {
+  //   sections.forEach((section) => {
+  //     const element = document.getElementById(section);
+  //     if (element) {
+  //       const rect = element.getBoundingClientRect();
+  //       if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+  //         if (activeSection !== section) {
+  //           setActiveSection(section);
+  //           const newUrl = `${window.location.origin}/#${section}`;
+  //           window.history.pushState(null, "", newUrl);
+  //         }
+  //       }
+  //     }
+  //   });
+  //   setWindowScrollY(window.scrollY);
+  // };
 
   useEffect(() => {
-    const handleScroll = () => setWindowScrollY(window.scrollY);
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -43,7 +84,7 @@ const MyNavbar: React.FC = () => {
         }`}
         expand="lg"
       >
-        <Navbar.Brand href="#home">
+        <Navbar.Brand onClick={() => handleLinkClick("home")}>
           <img src="/assets/imgs/logo.svg" alt="Cleriston" width={140} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -51,44 +92,48 @@ const MyNavbar: React.FC = () => {
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
           <Nav className="ml-auto">
-            <Nav.Link
+            {sections.map((section) => (
+              <Nav.Link
+                key={section}
+                as="div"
+                className={`mp-navlink ${
+                  activeSection === section ? "active" : ""
+                }`}
+                onClick={() => handleLinkClick(section)}
+              >
+                {t(`navigation.${section}`)}
+              </Nav.Link>
+            ))}
+
+            {/* <Nav.Link
               href="#projects"
-              className={`mp-navlink ${
-                activeSection === "projects" ? "active" : ""
-              }`}
+              className="mp-navlink"
               onClick={() => handleLinkClick("projects")}
             >
               {t("navigation.projects")}
             </Nav.Link>
             <Nav.Link
               href="#about"
-              className={`mp-navlink ${
-                activeSection === "about" ? "active" : ""
-              }`}
+              className="mp-navlink"
               onClick={() => handleLinkClick("about")}
             >
               {t("navigation.about")}
             </Nav.Link>
-
             <Nav.Link
               href="#skills"
-              className={`mp-navlink ${
-                activeSection === "skills" ? "active" : ""
-              }`}
+              className="mp-navlink"
               onClick={() => handleLinkClick("skills")}
             >
               {t("navigation.skills")}
             </Nav.Link>
-
             <Nav.Link
               href="#courses"
-              className={`mp-navlink ${
-                activeSection === "courses" ? "active" : ""
-              }`}
+              className="mp-navlink"
               onClick={() => handleLinkClick("courses")}
             >
               {t("navigation.courses")}
-            </Nav.Link>
+            </Nav.Link> */}
+
             <ThemeSwitch />
             <LanguageSwitcher />
           </Nav>
