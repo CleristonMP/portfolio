@@ -2,6 +2,7 @@ import React from "react";
 import { Modal, Carousel } from "react-bootstrap";
 import CustomCarouselPrevBtn from "./CustomCarouselPrevBtn";
 import CustomCarouselNextBtn from "./CustomCarouselNextBtn";
+import { generateCaptionFromFileName } from "../utils/functions";
 import "../styles/ProjectModal.css";
 
 type ProjectModalProps = {
@@ -46,6 +47,11 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                 alt={`${projectTitle} - Slide ${index + 1}`}
                 className="d-block w-100 h-auto"
               />
+              <Carousel.Caption className="project-caption">
+                <p>
+                  {generateCaptionFromFileName(img)}
+                </p>
+              </Carousel.Caption>
             </Carousel.Item>
           ))}
         </Carousel>

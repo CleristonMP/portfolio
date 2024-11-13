@@ -2,3 +2,16 @@
   padding: 0;
   position: relative;
 }
+
+.project-caption {
+  text-align: center;
+  font-size: 14px;
+  background-color: var(--bg-color);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.project-caption p {
+  color: var(--text-color);
+  font-weight: bold;
+}

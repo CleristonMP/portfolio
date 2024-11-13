@@ -1,11 +1,14 @@
 export interface Project {
   title: string;
+  description: string;
   images: string[];
 }
 
 const projectsData: Project[] = [
   {
     title: "catalog",
+    description:
+      "O projeto Catalog é uma aplicação web desenvolvida usando o framework Spring para o backend e React para o frontend. Ele foi projetado para fornecer uma plataforma centralizada onde usuários podem gerenciar e visualizar informações sobre diversos catálogos de produtos.",
     images: [
       "/assets/imgs/projects/catalog/1-frontend-react-home-page.png",
       "/assets/imgs/projects/catalog/backend-postman-login-request.png",
@@ -28,6 +31,8 @@ const projectsData: Project[] = [
   },
   {
     title: "dscommerce",
+    description:
+      "O DSCommerce é uma aplicação web completa desenvolvida com Spring Boot no backend e React no frontend. Ele permite a gestão de produtos, categorias, pedidos e clientes.",
     images: [
       "/assets/imgs/projects/dscommerce/1-frontend-react-home-page.png",
       "/assets/imgs/projects/dscommerce/backend-postman-login-request.png",
@@ -45,6 +50,8 @@ const projectsData: Project[] = [
   },
   {
     title: "webmatriculas",
+    description:
+      "O WebMatriculas é um sistema para gestão de matrículas em instituições de ensino, composto por duas partes: um frontend em React e um backend em Spring Boot. Ambos se comunicam por meio de uma API RESTful.",
     images: [
       "/assets/imgs/projects/webmatriculas/1-frontend-react-login.png",
       "/assets/imgs/projects/webmatriculas/backend-postman-login-request.png",

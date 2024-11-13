@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -14,7 +14,7 @@ const MyNavbar: React.FC = () => {
   const screenSize = useScreenSize();
   const { t } = useTranslation();
 
-  const sections = ["home", "projects", "about", "skills", "courses"];
+  const sections = useMemo(() => ["home", "projects", "about", "skills", "courses"], [])
 
   const handleLinkClick = (section: string) => {
     const element = document.getElementById(section);
@@ -26,51 +26,34 @@ const MyNavbar: React.FC = () => {
     }
   };
 
-  const handleScroll = () => {
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition < 50) {
-      // Quando estiver bem próximo ao topo, ativa "Home" e atualiza a URL
-      setActiveSection("home");
-      const newUrl = `${window.location.origin}/#home`;
-      window.history.pushState(null, "", newUrl);
-    } else {
-      sections.forEach((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-            setActiveSection(section);
-            const newUrl = `${window.location.origin}/#${section}`;
-            window.history.pushState(null, "", newUrl);
-          }
-        }
-      });
-    }
-    setWindowScrollY(scrollPosition);
-  };
-
-  // const handleScroll = () => {
-  //   sections.forEach((section) => {
-  //     const element = document.getElementById(section);
-  //     if (element) {
-  //       const rect = element.getBoundingClientRect();
-  //       if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-  //         if (activeSection !== section) {
-  //           setActiveSection(section);
-  //           const newUrl = `${window.location.origin}/#${section}`;
-  //           window.history.pushState(null, "", newUrl);
-  //         }
-  //       }
-  //     }
-  //   });
-  //   setWindowScrollY(window.scrollY);
-  // };
-
   useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+  
+      if (scrollPosition < 50) {
+        // Quando estiver bem próximo ao topo, ativa "Home" e atualiza a URL
+        setActiveSection("home");
+        const newUrl = `${window.location.origin}/#home`;
+        window.history.pushState(null, "", newUrl);
+      } else {
+        sections.forEach((section) => {
+          const element = document.getElementById(section);
+          if (element) {
+            const rect = element.getBoundingClientRect();
+            if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+              setActiveSection(section);
+              const newUrl = `${window.location.origin}/#${section}`;
+              window.history.pushState(null, "", newUrl);
+            }
+          }
+        });
+      }
+      setWindowScrollY(scrollPosition);
+    };
+  
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]);
 
   return (
     <header className="header-area" id="header">
