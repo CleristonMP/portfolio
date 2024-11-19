@@ -20,6 +20,12 @@
 
 .single-project {
   cursor: pointer;
+  text-align: center;
+}
+
+.single-project img {
+  max-height: 211.5px;
+  width: auto;
 }
 
 .short-info {
@@ -29,7 +35,7 @@
 .short-info h4 {
   text-transform: uppercase;
   font-size: 20px;
-  margin: 0;
+  margin-bottom: 10px;
 }
 
 .short-info h4 a {
@@ -43,6 +49,10 @@
 }
 
 @media (min-width: 768px) {
+  .projects-area {
+    padding-top: 120px;
+  }
+
   .projects-title {
     margin-bottom: 50px;
   }
@@ -56,7 +66,21 @@
     margin-bottom: 80px;
   }
 
+  .single-project img {
+    max-height: 182.25px;
+  }
+
   .short-info {
     margin-top: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-area {
+    padding-top: 150px;
+  }
+
+  .single-project img {
+    max-height: 161.98px;
   }
 }

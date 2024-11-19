@@ -3,15 +3,35 @@
   position: relative;
 }
 
+.project-modal .carousel-item img {
+  max-height: 610px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
 .project-caption {
+  display: none;
   text-align: center;
   font-size: 14px;
   background-color: var(--bg-color);
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 10px 0;
 }
 
 .project-caption p {
   color: var(--text-color);
   font-weight: bold;
+  margin: 0;
+}
+
+@media (min-width:576px) {
+  .project-modal .carousel-item img {
+    max-height: 710px;
+  }
+
+  .project-caption {
+    display: unset;
+  }
 }

@@ -45,7 +45,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
               <img
                 src={img}
                 alt={`${projectTitle} - Slide ${index + 1}`}
-                className="d-block w-100 h-auto"
+                className="d-block h-auto"
               />
               <Carousel.Caption className="project-caption">
                 <p>

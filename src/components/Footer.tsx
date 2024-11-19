@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -9,14 +9,20 @@ import {
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import "../styles/Footer.css";
+import ContactFormModal from "./ContactFormModal";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
+  const [showContactModal, setShowContactModal] = useState(false);
+
+  const handleOpenModal = () => setShowContactModal(true);
+  const handleCloseModal = () => setShowContactModal(false);
+
   const getFullYear = () => new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-white text-center py-4 footer">
+    <footer className="bg-dark text-white text-center py-5 footer">
       <div className="container">
         <div className="footer-logo mb-3">
           <a href="#home">
@@ -63,13 +69,14 @@ const Footer: React.FC = () => {
           >
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
           </a>
-          <a href="mailto:cmelopereira@outlook.com" className="text-white mx-2">
+          <a onClick={handleOpenModal} className="text-white mx-2">
             <FontAwesomeIcon icon={faEnvelope} size="lg" />
           </a>
         </div>
 
         <p className="mb-0">{t("footer.copyright", { year: getFullYear() })}</p>
       </div>
+      <ContactFormModal show={showContactModal} onClose={handleCloseModal} />
     </footer>
   );
 };

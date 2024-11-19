@@ -1,5 +1,6 @@
 .courses-area {
   padding-top: 100px;
+  margin-bottom: 20px;
 }
 
 .courses-intro {
@@ -58,6 +59,10 @@
 }
 
 @media (min-width: 576px) {
+  .courses-area {
+    margin-bottom: 30px;
+  }
+
   .courses-title {
     font-size: 30px;
   }
@@ -68,6 +73,10 @@
 }
 
 @media (min-width: 768px) {
+  .courses-area {
+    padding-top: 150px;
+  }
+
   .courses-title {
     font-size: 36px;
     line-height: 50px;

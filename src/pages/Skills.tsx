@@ -3,6 +3,7 @@ import techsData from "../utils/techsData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Tooltip } from "react-tooltip";
 import "../styles/Skills.css";
 
 const Skills: React.FC = () => {
@@ -31,8 +32,11 @@ const Skills: React.FC = () => {
                     key={img.id}
                     className="d-flex justify-content-center col-lg-4 col-md-4 col-sm-6 mb-5"
                   >
-                    <div className="single-tech-item">
+                    <div className="single-tech-item" data-tooltip-id={`tooltip-${img.id}`}>
                       <img src={img.imgSrc} alt={img.caption} />
+                      <Tooltip id={`tooltip-${img.id}`} place="top">
+                        {img.caption}
+                      </Tooltip>
                     </div>
                   </div>
                 ))}

@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
                     <img
                       src={project.images[0]}
                       alt={project.title}
-                      className="img-fluid w-100"
+                      className="img-fluid"
                       onClick={() => handleProjectClick(project)}
                     />
                   </div>

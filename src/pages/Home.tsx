@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import "../styles/Home.css";
+import ContactFormModal from "../components/ContactFormModal";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
+  const [showContactModal, setShowContactModal] = useState(false);
+
+  const handleOpenModal = () => setShowContactModal(true);
+  const handleCloseModal = () => setShowContactModal(false);
 
   return (
     <section id="home" className="home-area">
@@ -15,7 +20,11 @@ const Home: React.FC = () => {
               <h1 className="text-uppercase">{t("home.name")}</h1>
               <h5 className="text-uppercase">{t("home.profession")}</h5>
               <div className="button-group d-flex align-items-center">
-                <button type="button" className="btn btn-primary custom-btn">
+                <button
+                  type="button"
+                  className="btn btn-primary custom-btn"
+                  onClick={handleOpenModal}
+                >
                   <span>{t("home.buttons.hireMe")}</span>
                 </button>
                 <a
@@ -36,6 +45,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
+      <ContactFormModal show={showContactModal} onClose={handleCloseModal} />
     </section>
   );
 };
