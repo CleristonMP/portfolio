@@ -13,7 +13,10 @@
   font-size: 1.65rem;
 }
 
-.home-content .custom-btn,
+.home-content .custom-btn {
+  margin-top: 20px;
+}
+
 .home-content .cv-btn {
   display: none;
 }
@@ -62,8 +65,12 @@
   }
 
   .home-content .custom-btn {
-    display: unset;
+    margin-top: 0;
     margin-right: 20px;
+  }
+
+  .home-content .custom-btn span {
+    padding: 0 32px;
   }
 
   .home-content .cv-btn {

@@ -69,7 +69,7 @@ const Footer: React.FC = () => {
           >
             <FontAwesomeIcon icon={faLinkedin} size="lg" />
           </a>
-          <a onClick={handleOpenModal} className="text-white mx-2">
+          <a onClick={handleOpenModal} className="text-white mx-2" style={{cursor: "pointer"}}>
             <FontAwesomeIcon icon={faEnvelope} size="lg" />
           </a>
         </div>

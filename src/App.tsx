@@ -1,11 +1,11 @@
 import "./styles/globals.css";
 import MyNavbar from "./components/MyNavbar";
 import Footer from "./components/Footer";
-import About from "./pages/About";
-import Skills from "./pages/Skills";
-import Home from "./pages/Home";
-import Courses from "./pages/Courses";
-import Projects from "./pages/Projects";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Home from "./sections/Home";
+import Courses from "./sections/Courses";
+import Projects from "./sections/Projects";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";

@@ -7,14 +7,14 @@ import "../styles/ProjectModal.css";
 
 type ProjectModalProps = {
   projectTitle: string;
-  imgsUrls: string[];
+  mediaUrls: string[];
   onClose: () => void;
   show: boolean;
 };
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
   projectTitle,
-  imgsUrls,
+  mediaUrls,
   onClose,
   show,
 }) => {
@@ -40,20 +40,38 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           prevIcon={<CustomCarouselPrevBtn />}
           nextIcon={<CustomCarouselNextBtn />}
         >
-          {imgsUrls.map((img, index) => (
-            <Carousel.Item key={index}>
-              <img
-                src={img}
-                alt={`${projectTitle} - Slide ${index + 1}`}
-                className="d-block h-auto"
-              />
-              <Carousel.Caption className="project-caption">
-                <p>
-                  {generateCaptionFromFileName(img)}
-                </p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          ))}
+          {mediaUrls.map((media, index) => {
+            const isVideo = media.endsWith(".mp4");
+
+            return (
+              <Carousel.Item key={index}>
+                {isVideo ? (
+                  <video
+                    controls
+                    className="d-block h-auto"
+                    title={`${projectTitle} - Video ${index + 1}`}
+                    autoPlay
+                    loop
+                    controlsList="nodownload noremoteplayback"
+                  >
+                    <source src={media} type="video/mp4" />
+                    Seu navegador não suporta o elemento de vídeo.
+                  </video>
+                ) : (
+                  <>
+                    <img
+                      src={media}
+                      alt={`${projectTitle} - Slide ${index + 1}`}
+                      className="d-block h-auto"
+                    />
+                    <Carousel.Caption className="project-caption">
+                      <p>{generateCaptionFromFileName(media)}</p>
+                    </Carousel.Caption>
+                  </>
+                )}
+              </Carousel.Item>
+            );
+          })}
         </Carousel>
       </Modal.Body>
     </Modal>

@@ -3,10 +3,15 @@
   position: relative;
 }
 
-.project-modal .carousel-item img {
+.project-modal .carousel-item img,
+.project-modal .carousel-item video {
   max-height: 610px;
   max-width: 100%;
   margin: 0 auto;
+}
+
+.project-modal .carousel-item video {
+  padding: 0 20px;
 }
 
 .project-caption {
@@ -27,7 +32,8 @@
 }
 
 @media (min-width:576px) {
-  .project-modal .carousel-item img {
+  .project-modal .carousel-item img,
+  .project-modal .carousel-item video {
     max-height: 710px;
   }
 
