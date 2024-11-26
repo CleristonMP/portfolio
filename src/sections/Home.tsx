@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
-import "../styles/Home.css";
 import ContactFormModal from "../components/ContactFormModal";
+import "../styles/Home.css";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           </div>
           <div className="col-md-5">
             <div className="home-right-img">
-              <img src="/assets/imgs/my-avatar.jpg" alt="Cleriston avatar" />
+              <img src="/assets/medias/my-avatar.jpg" alt="Cleriston avatar" />
             </div>
           </div>
         </div>
