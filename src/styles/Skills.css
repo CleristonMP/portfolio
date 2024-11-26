@@ -84,7 +84,7 @@
   }
 
   .my-info::before {
-    background: url("/public/assets/imgs/my-info-bg.png") no-repeat;
+    background: url("/public/assets/medias/my-info-bg.png") no-repeat;
   }
 
   .txt-large {
