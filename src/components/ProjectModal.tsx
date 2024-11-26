@@ -51,7 +51,6 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
                     className="d-block h-auto"
                     title={`${projectTitle} - Video ${index + 1}`}
                     autoPlay
-                    loop
                     controlsList="nodownload noremoteplayback"
                   >
                     <source src={media} type="video/mp4" />
