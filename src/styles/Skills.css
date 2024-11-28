@@ -84,7 +84,7 @@
   }
 
   .my-info::before {
-    background: url("/public/assets/medias/my-info-bg.png") no-repeat;
+    background: url("https://cleristonmp.github.io/portfolio/assets/medias/my-info-bg.png") no-repeat;
   }
 
   .txt-large {

@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         <div className="footer-logo mb-3">
           <a href="#home">
             <img
-              src="/assets/medias/logo.svg"
+              src="https://cleristonmp.github.io/portfolio/assets/medias/logo.svg"
               alt="Cleriston"
               width={60}
               height={60}

@@ -40,7 +40,7 @@ const Home: React.FC = () => {
           </div>
           <div className="col-md-5">
             <div className="home-right-img">
-              <img src="/assets/medias/my-avatar.jpg" alt="Cleriston avatar" />
+              <img src="https://cleristonmp.github.io/portfolio/assets/medias/my-avatar.jpg" alt="Cleriston avatar" />
             </div>
           </div>
         </div>

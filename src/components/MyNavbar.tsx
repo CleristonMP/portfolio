@@ -68,7 +68,7 @@ const MyNavbar: React.FC = () => {
         expand="lg"
       >
         <Navbar.Brand onClick={() => handleLinkClick("home")}>
-          <img src="/assets/medias/logo.svg" alt="Cleriston" width={140} />
+          <img src="https://cleristonmp.github.io/portfolio/assets/medias/logo.svg" alt="Cleriston" width={140} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <FontAwesomeIcon icon={faBars} />

@@ -18,7 +18,7 @@ const About: React.FC = () => {
         <div className="col-md-6">
           <div className="about-img">
             <img
-              src="/assets/medias/about.svg"
+              src="https://cleristonmp.github.io/portfolio/assets/medias/about.svg"
               alt="Imagem sobre mim"
               className="img-fluid"
             />

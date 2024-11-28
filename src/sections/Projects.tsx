@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
                 <div className="project-box">
                   <div className="single-project">
                     <img
-                      src={project.media[0]}
+                      src={project.medias[0]}
                       alt={project.title}
                       className="img-fluid"
                       onClick={() => handleProjectClick(project)}
@@ -81,35 +81,7 @@ const Projects: React.FC = () => {
                             <FontAwesomeIcon icon={faGithub} /> GitHub
                           </a>
                         )
-                      )}                      
-                      {/* {project.githubLink && (
-                        <a
-                          href={project.githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="project-link"
-                        >
-                          <FontAwesomeIcon icon={faGithub} /> GitHub
-                        </a>
                       )}
-                      {project.repoFrontend && project.repoBackend && (
-                        <>
-                          <a
-                            href={project.repoFrontend}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {t("projects.viewFrontendRepo")}
-                          </a>
-                          <a
-                            href={project.repoBackend}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            {t("projects.viewBackendRepo")}
-                          </a>
-                        </>
-                      )} */}
                       {project.liveLink && (
                         <a
                           href={project.liveLink}
@@ -132,7 +104,7 @@ const Projects: React.FC = () => {
       {selectedProject && (
         <ProjectModal
           projectTitle={selectedProject.title}
-          mediaUrls={selectedProject.media}
+          mediaUrls={selectedProject.medias}
           onClose={handleModalClose}
           show={showModal}
         />
