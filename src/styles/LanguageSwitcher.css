@@ -1,3 +1,7 @@
+.lang-switcher-ctr button {
+  font-family: "Noto Color Emoji", sans-serif;
+}
+
 .lang-switcher-ctr {
   display: flex;
   justify-content: flex-start;

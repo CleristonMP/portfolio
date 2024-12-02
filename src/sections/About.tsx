@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import { useTranslation, Trans } from "react-i18next";
 import "../styles/About.css";
+import BASE_URL from "../utils/baseUrl";
 
 const About: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -18,7 +19,7 @@ const About: React.FC = () => {
         <div className="col-md-6">
           <div className="about-img">
             <img
-              src="https://cleristonmp.github.io/portfolio/assets/medias/about.svg"
+              src={`${BASE_URL}/about.svg`}
               alt="Imagem sobre mim"
               className="img-fluid"
             />
@@ -32,14 +33,7 @@ const About: React.FC = () => {
               <Trans
                 i18nKey="about.skills"
                 components={{
-                  0: <strong />,
                   1: <strong />,
-                  2: <strong />,
-                  3: <strong />,
-                  4: <strong />,
-                  5: <strong />,
-                  6: <strong />,
-                  7: <strong />,
                 }}
               />
             </p>

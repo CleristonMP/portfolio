@@ -1,3 +1,7 @@
+import BASE_URL from "./baseUrl";
+
+const BASE_URL_CERTIFICATES = `${BASE_URL}/certificates`
+
 export interface Topic {
   subject: string;
   description: string;
@@ -16,7 +20,7 @@ const certificatesData: Certificate[] = [
   {
     id: 1,
     certSrc:
-      "https://cleristonmp.github.io/portfolio/assets/medias/certificates/1-modern-developer-professional-qualification.png",
+      `${BASE_URL_CERTIFICATES}/1-modern-developer-professional-qualification.png`,
     caption: "Formação Desenvolvedor Moderno",
     completionDate: "30-03-2023",
     courseLoad: 650,
@@ -75,7 +79,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 2,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/2-react.png",
+    certSrc: `${BASE_URL_CERTIFICATES}/2-react.png`,
     caption: "Bootcamp React",
     completionDate: "06-06-2022",
     courseLoad: 160,
@@ -114,7 +118,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 3,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/3-spring.png",
+    certSrc: `${BASE_URL_CERTIFICATES}/3-spring.png`,
     caption: "Bootcamp Spring",
     completionDate: "16-11-2021",
     courseLoad: 160,
@@ -153,7 +157,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 4,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/4-react-native.jpg",
+    certSrc: `${BASE_URL_CERTIFICATES}/4-react-native.jpg`,
     caption: "Desenvolvimento com React Native",
     completionDate: "04-07-2023",
     courseLoad: 45,
@@ -181,7 +185,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 5,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/5-microservices-JAVA.jpg",
+    certSrc: `${BASE_URL_CERTIFICATES}/5-microservices-JAVA.jpg`,
     caption: "Microsserviços JAVA",
     completionDate: "29-12-2021",
     courseLoad: 8,
@@ -216,7 +220,7 @@ const certificatesData: Certificate[] = [
   {
     id: 6,
     certSrc:
-      "https://cleristonmp.github.io/portfolio/assets/medias/certificates/6-UML-data-modeling-object-oriented-analysis-and-design.jpg",
+      `${BASE_URL_CERTIFICATES}/6-UML-data-modeling-object-oriented-analysis-and-design.jpg`,
     caption: "Modelagem de Dados UML (Análise e Projeto Orientado a Objetos)",
     completionDate: "12-12-2021",
     courseLoad: 13,
@@ -249,7 +253,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 7,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/7-JAVA-object-oriented-programming.jpg",
+    certSrc: `${BASE_URL_CERTIFICATES}/7-JAVA-object-oriented-programming.jpg`,
     caption: "JAVA Completo - Programação Orientada a Objetos",
     completionDate: "21-11-2021",
     courseLoad: 50,
@@ -291,7 +295,7 @@ const certificatesData: Certificate[] = [
   {
     id: 8,
     certSrc:
-      "https://cleristonmp.github.io/portfolio/assets/medias/certificates/8-data-structure-and-algorithms-in-python.jpg",
+      `${BASE_URL_CERTIFICATES}/8-data-structure-and-algorithms-in-python.jpg`,
     caption: "Estrutura de Dados e Algoritmos em Python",
     completionDate: "09-06-2021",
     courseLoad: 22.5,
@@ -341,7 +345,7 @@ const certificatesData: Certificate[] = [
   },
   {
     id: 9,
-    certSrc: "https://cleristonmp.github.io/portfolio/assets/medias/certificates/9-cmp-algorithms-and-programming-logic.jpg",
+    certSrc: `${BASE_URL_CERTIFICATES}/9-cmp-algorithms-and-programming-logic.jpg`,
     caption: "Algoritmos e Lógica de Programação",
     completionDate: "01-01-2021",
     courseLoad: 30.5,

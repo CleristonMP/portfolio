@@ -7,6 +7,7 @@ import ThemeSwitch from "./ThemeSwitch";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import "../styles/MyNavbar.css";
+import BASE_URL from "../utils/baseUrl";
 
 const MyNavbar: React.FC = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
@@ -31,7 +32,6 @@ const MyNavbar: React.FC = () => {
       const scrollPosition = window.scrollY;
   
       if (scrollPosition < 50) {
-        // Quando estiver bem próximo ao topo, ativa "Home" e atualiza a URL
         setActiveSection("home");
         const newUrl = `${window.location.origin}/#home`;
         window.history.pushState(null, "", newUrl);
@@ -68,7 +68,10 @@ const MyNavbar: React.FC = () => {
         expand="lg"
       >
         <Navbar.Brand onClick={() => handleLinkClick("home")}>
-          <img src="https://cleristonmp.github.io/portfolio/assets/medias/logo.svg" alt="Cleriston" width={140} />
+          <img 
+          src={`${BASE_URL}/logo.svg`}
+          alt="Cleriston" 
+          width={140} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <FontAwesomeIcon icon={faBars} />
@@ -87,36 +90,6 @@ const MyNavbar: React.FC = () => {
                 {t(`navigation.${section}`)}
               </Nav.Link>
             ))}
-
-            {/* <Nav.Link
-              href="#projects"
-              className="mp-navlink"
-              onClick={() => handleLinkClick("projects")}
-            >
-              {t("navigation.projects")}
-            </Nav.Link>
-            <Nav.Link
-              href="#about"
-              className="mp-navlink"
-              onClick={() => handleLinkClick("about")}
-            >
-              {t("navigation.about")}
-            </Nav.Link>
-            <Nav.Link
-              href="#skills"
-              className="mp-navlink"
-              onClick={() => handleLinkClick("skills")}
-            >
-              {t("navigation.skills")}
-            </Nav.Link>
-            <Nav.Link
-              href="#courses"
-              className="mp-navlink"
-              onClick={() => handleLinkClick("courses")}
-            >
-              {t("navigation.courses")}
-            </Nav.Link> */}
-
             <ThemeSwitch />
             <LanguageSwitcher />
           </Nav>

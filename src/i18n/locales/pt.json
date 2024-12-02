@@ -17,12 +17,12 @@
   },
   "projects": {
     "title": "Bem-vindo ao Meu Portfólio",
-    "description": "Veja meus principais projetos abaixo:"
+    "description": "Explore a <1>galeria</1> de cada projeto. <1>Clique em um card</1> para ver fotos e vídeos incríveis!"
   },
   "about": {
     "title": "Deixa eu me apresentar",
     "introduction": "Olá! Meu nome é Cleriston e sou um desenvolvedor web e mobile com mais de 5 anos de experiência. Durante minha carreira, desenvolvi vários projetos que vão desde aplicativos móveis até plataformas web complexas.",
-    "skills": "Atualmente, desenvolvo aplicações em <0>Java</0> (backend) e <1>JavaScript</1> (frontend), além de <2>HTML</2> e <3>CSS</3>. Amo trabalhar com tecnologias modernas, como <4>React, TypeScript</4> e <5>Spring Boot</5>, e estou sempre aprendendo e aprimorando minhas habilidades. Também desenvolvo aplicativos mobile com <6>Ionic</6> e <7>Jetpack Compose (Kotlin)</7>.",
+    "skills": "Atualmente, desenvolvo aplicações em <1>Java</1> (backend) e <1>JavaScript</1> (frontend), além de <1>HTML</1> e <1>CSS</1>. Amo trabalhar com tecnologias modernas, como <1>React, TypeScript</1> e <1>Spring Boot</1>, e estou sempre aprendendo e aprimorando minhas habilidades. Também desenvolvo aplicativos mobile com <1>Ionic</1> e <1>Jetpack Compose (Kotlin)</1>.",
     "background": "Sempre tive afinidade com a área de TI, apesar de ter iniciado minha carreira na área portuária. Mesmo atuando como Inspetor Técnico Naval, também fui responsável pela montagem e manutenção de computadores, rede LAN e desenvolvimento de soluções administrativas. Decidi mudar de profissão e me dedicar à área que sempre chamou minha atenção e que se alinha mais com minha vocação.",
     "experience": "Com o conhecimento adquirido, desenvolvi o site da empresa onde trabalho. Além disso, ao longo dos últimos 5 anos, tive a oportunidade de trabalhar como freelancer, o que me permitiu colaborar com uma variedade de clientes e empresas. Gosto do desafio de entender as necessidades de cada cliente e transformar essas necessidades em um produto funcional e bem apresentável.",
     "callToAction": "Se você está procurando alguém para ajudar no desenvolvimento do seu próximo projeto, ficarei feliz em colaborar. Entre em contato e vamos conversar!",

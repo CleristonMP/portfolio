@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProjectModal from "../components/ProjectModal";
 import projectsData, { Project } from "../utils/projectsData";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -30,7 +30,14 @@ const Projects: React.FC = () => {
           <div className="col-lg-12">
             <div className="projects-title text-center">
               <h2>{t("projects.title")}</h2>
-              <p>{t("projects.description")}</p>
+              <p>
+                <Trans
+                  i18nKey="projects.description"
+                  components={{
+                    1: <strong />,
+                  }}
+                />
+              </p>
             </div>
           </div>
         </div>
@@ -51,7 +58,7 @@ const Projects: React.FC = () => {
                     <h4>{project.title}</h4>
                     <p>{project.description}</p>
                     <div className="project-links">
-                    {project.repoFrontend && project.repoBackend ? (
+                      {project.repoFrontend && project.repoBackend ? (
                         <>
                           <a
                             href={project.repoFrontend}
@@ -59,7 +66,8 @@ const Projects: React.FC = () => {
                             rel="noopener noreferrer"
                             className="project-link"
                           >
-                            <FontAwesomeIcon icon={faGithub} /> Frontend Repository
+                            <FontAwesomeIcon icon={faGithub} /> Frontend
+                            Repository
                           </a>
                           <a
                             href={project.repoBackend}
@@ -67,7 +75,8 @@ const Projects: React.FC = () => {
                             rel="noopener noreferrer"
                             className="project-link"
                           >
-                            <FontAwesomeIcon icon={faGithub} /> Backend Repository
+                            <FontAwesomeIcon icon={faGithub} /> Backend
+                            Repository
                           </a>
                         </>
                       ) : (

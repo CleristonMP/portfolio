@@ -13,7 +13,7 @@ const LanguageSwitcher: React.FC = () => {
   return (
     <div className="lang-switcher-ctr">
       <button onClick={() => changeLanguage("pt")}>🇧🇷</button>|
-      <button onClick={() => changeLanguage("en")}>🇺🇸</button>
+      <button onClick={() => changeLanguage("en")}>🇺🇲</button>
     </div>
   );
 };

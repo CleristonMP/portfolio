@@ -10,6 +10,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
 import "../styles/Footer.css";
 import ContactFormModal from "./ContactFormModal";
+import BASE_URL from "../utils/baseUrl";
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -27,7 +28,7 @@ const Footer: React.FC = () => {
         <div className="footer-logo mb-3">
           <a href="#home">
             <img
-              src="https://cleristonmp.github.io/portfolio/assets/medias/logo.svg"
+            src={`${BASE_URL}/logo.svg`}
               alt="Cleriston"
               width={60}
               height={60}

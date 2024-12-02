@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import ContactFormModal from "../components/ContactFormModal";
 import "../styles/Home.css";
+import BASE_URL from "../utils/baseUrl";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -40,7 +41,7 @@ const Home: React.FC = () => {
           </div>
           <div className="col-md-5">
             <div className="home-right-img">
-              <img src="https://cleristonmp.github.io/portfolio/assets/medias/my-avatar.jpg" alt="Cleriston avatar" />
+              <img src={`${BASE_URL}/my-avatar.jpg`} alt="Cleriston avatar" />
             </div>
           </div>
         </div>
