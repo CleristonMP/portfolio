@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Collapse from "react-bootstrap/Collapse";
 import { useTranslation, Trans } from "react-i18next";
 import "../styles/About.css";
-import BASE_URL from "../utils/baseUrl";
+import MEDIAS_BASE_URL from "../utils/mediasBaseUrl";
 
 const About: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -19,7 +19,7 @@ const About: React.FC = () => {
         <div className="col-md-6">
           <div className="about-img">
             <img
-              src={`${BASE_URL}/about.svg`}
+              src={`${MEDIAS_BASE_URL}/about.svg`}
               alt="Imagem sobre mim"
               className="img-fluid"
             />

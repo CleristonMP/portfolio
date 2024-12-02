@@ -1,6 +1,6 @@
-import BASE_URL from "./baseUrl";
+import MEDIAS_BASE_URL from "./mediasBaseUrl";
 
-const BASE_URL_CERTIFICATES = `${BASE_URL}/certificates`
+const BASE_URL_CERTIFICATES = `${MEDIAS_BASE_URL}/certificates`
 
 export interface Topic {
   subject: string;

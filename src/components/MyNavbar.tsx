@@ -6,14 +6,16 @@ import useScreenSize from "../hooks/useScreenSize";
 import ThemeSwitch from "./ThemeSwitch";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
+import MEDIAS_BASE_URL from "../utils/mediasBaseUrl";
 import "../styles/MyNavbar.css";
-import BASE_URL from "../utils/baseUrl";
 
 const MyNavbar: React.FC = () => {
   const [windowScrollY, setWindowScrollY] = useState(0);
   const [activeSection, setActiveSection] = useState<string>("home");
   const screenSize = useScreenSize();
   const { t } = useTranslation();
+
+  const BASE_URL = process.env.PUBLIC_URL || "";
 
   const sections = useMemo(() => ["home", "projects", "about", "skills", "courses"], [])
 
@@ -22,7 +24,7 @@ const MyNavbar: React.FC = () => {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setActiveSection(section);
-      const newUrl = `${window.location.origin}/#${section}`;
+      const newUrl = `${BASE_URL}/#${section}`;
       window.history.pushState(null, "", newUrl);
     }
   };
@@ -33,7 +35,7 @@ const MyNavbar: React.FC = () => {
   
       if (scrollPosition < 50) {
         setActiveSection("home");
-        const newUrl = `${window.location.origin}/#home`;
+        const newUrl = `${BASE_URL}/#home`;
         window.history.pushState(null, "", newUrl);
       } else {
         sections.forEach((section) => {
@@ -42,7 +44,7 @@ const MyNavbar: React.FC = () => {
             const rect = element.getBoundingClientRect();
             if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
               setActiveSection(section);
-              const newUrl = `${window.location.origin}/#${section}`;
+              const newUrl = `${BASE_URL}/#${section}`;
               window.history.pushState(null, "", newUrl);
             }
           }
@@ -69,7 +71,7 @@ const MyNavbar: React.FC = () => {
       >
         <Navbar.Brand onClick={() => handleLinkClick("home")}>
           <img 
-          src={`${BASE_URL}/logo.svg`}
+          src={`${MEDIAS_BASE_URL}/logo.svg`}
           alt="Cleriston" 
           width={140} />
         </Navbar.Brand>

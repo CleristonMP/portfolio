@@ -1,6 +1,6 @@
-import BASE_URL from "./baseUrl";
+import MEDIAS_BASE_URL from "./mediasBaseUrl";
 
-const BASE_URL_PROJECTS = `${BASE_URL}/projects`
+const BASE_URL_PROJECTS = `${MEDIAS_BASE_URL}/projects`
 
 export interface Project {
   title: string;

@@ -1,6 +1,6 @@
-import BASE_URL from "./baseUrl";
+import MEDIAS_BASE_URL from "./mediasBaseUrl";
 
-const BASE_URL_TECHS = `${BASE_URL}/techs`
+const BASE_URL_TECHS = `${MEDIAS_BASE_URL}/techs`
 
 const techsData = [
   {
