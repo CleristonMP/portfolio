@@ -17,7 +17,25 @@
   },
   "projects": {
     "title": "Welcome to My Portfolio",
-    "description": "Check out the <1>gallery</1> for each project. <1>Click a card</1> to see awesome photos and videos!"
+    "description": "Check out the <1>gallery</1> for each project. <1>Click a card</1> to see awesome photos and videos!",
+    "reports-registry": {
+      "description": "The Reports Registry is a comprehensive web application designed to efficiently manage equipment tests and reports. This integrated solution allows users to register, consult, update, and delete information about equipment, batches, tests, and much more, ensuring compliance with technical standards and facilitating asset management."
+    },
+    "audience-counter": {
+      "description": "The Audience Counter is an application developed to count the audience at events, offering two counting methods: direct counting and row counting. It was designed to facilitate efficient and accurate counting and registration of attendance, with options to save, view, and manage saved counts."
+    },
+    "spring-ionic": {
+      "description": "SpringIonic is an application developed with Spring Boot and Ionic that offers a complete platform for creating online stores. The application allows the registration of products, categories, customers, and orders, as well as offering features such as product search, shopping cart management, and payment."
+    },
+    "webmatriculas": {
+      "description": "WebMatriculas is a system for managing enrollments in educational institutions, composed of two parts: a React frontend and a Spring Boot backend. Both communicate through a RESTful API."
+    },
+    "catalog": {
+      "description": "The Catalog project is a web application developed using the Spring framework for the backend and React for the frontend. It was designed to provide a centralized platform where users can manage and view information about various product catalogs."
+    },
+    "dscommerce": {
+      "description": "DSCommerce is a comprehensive web application developed with Spring Boot on the backend and React on the frontend. It allows the management of products, categories, orders, and customers."
+    }
   },
   "about": {
     "title": "Let me introduce myself",

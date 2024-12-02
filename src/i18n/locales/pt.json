@@ -17,7 +17,25 @@
   },
   "projects": {
     "title": "Bem-vindo ao Meu Portfólio",
-    "description": "Explore a <1>galeria</1> de cada projeto. <1>Clique em um card</1> para ver fotos e vídeos incríveis!"
+    "description": "Explore a <1>galeria</1> de cada projeto. <1>Clique em um card</1> para ver fotos e vídeos incríveis!",
+    "reports-registry": {
+      "description": "O Reports Registry é uma aplicação web completa, desenvolvida para gerenciar de forma eficiente testes e relatórios de equipamentos. Essa solução integrada permite aos usuários cadastrar, consultar, atualizar e excluir informações sobre equipamentos, lotes, testes e muito mais, garantindo a conformidade com as normas técnicas e facilitando a gestão de ativos."
+    },
+    "audience-counter": {
+      "description": "O Audience Counter é um aplicativo desenvolvido para contar o público em eventos, oferecendo dois tipos de contagem: contagem direta e contagem por fileiras. Ele foi projetado para facilitar a contagem e registro da assistência de forma eficiente e precisa, com opções para salvar, visualizar e gerenciar as contagens salvas."
+    },
+    "spring-ionic": {
+      "description": "O SpringIonic é uma aplicação desenvolvida com Spring Boot e Ionic que oferece uma plataforma completa para a criação de lojas virtuais. A aplicação permite o cadastro de produtos, categorias, clientes e pedidos, além de oferecer funcionalidades como busca de produtos, gerenciamento de carrinho de compras e pagamento."
+    },
+    "webmatriculas": {
+      "description": "O WebMatriculas é um sistema para gestão de matrículas em instituições de ensino, composto por duas partes: um frontend em React e um backend em Spring Boot. Ambos se comunicam por meio de uma API RESTful."
+    },
+    "catalog": {
+      "description": "O projeto Catalog é uma aplicação web desenvolvida usando o framework Spring para o backend e React para o frontend. Ele foi projetado para fornecer uma plataforma centralizada onde usuários podem gerenciar e visualizar informações sobre diversos catálogos de produtos."
+    },
+    "dscommerce": {
+      "description": "O DSCommerce é uma aplicação web completa desenvolvida com Spring Boot no backend e React no frontend. Ele permite a gestão de produtos, categorias, pedidos e clientes."
+    }
   },
   "about": {
     "title": "Deixa eu me apresentar",

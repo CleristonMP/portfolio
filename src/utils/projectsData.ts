@@ -4,7 +4,7 @@ const BASE_URL_PROJECTS = `${BASE_URL}/projects`
 
 export interface Project {
   title: string;
-  description: string;
+  descriptionKey: string;
   medias: string[];
   repoFrontend?: string;
   repoBackend?: string;
@@ -15,8 +15,7 @@ export interface Project {
 const projectsData: Project[] = [
   {
     title: "reports-registry",
-    description:
-      "O Reports Registry é uma aplicação web completa, desenvolvida para gerenciar de forma eficiente testes e relatórios de equipamentos. Essa solução integrada permite aos usuários cadastrar, consultar, atualizar e excluir informações sobre equipamentos, lotes, testes e muito mais, garantindo a conformidade com as normas técnicas e facilitando a gestão de ativos.",
+    descriptionKey: "projects.reports-registry.description",
     medias: [
       `${BASE_URL_PROJECTS}/reports-registry/1-frontend-react-home-page.png`,
       `${BASE_URL_PROJECTS}/reports-registry/frontend-react-public-tracking.png`,
@@ -53,8 +52,7 @@ const projectsData: Project[] = [
   },
   {
     title: "audience-counter",
-    description:
-      "O Audience Counter é um aplicativo desenvolvido para contar o público em eventos, oferecendo dois tipos de contagem: contagem direta e contagem por fileiras. Ele foi projetado para facilitar a contagem e registro da assistência de forma eficiente e precisa, com opções para salvar, visualizar e gerenciar as contagens salvas.",
+    descriptionKey: "projects.audience-counter.description",
       medias: [
         `${BASE_URL_PROJECTS}/audience-counter/1-direct-count-view.jpg`,
         `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-view.jpg`,
@@ -70,7 +68,7 @@ const projectsData: Project[] = [
   },
   {
     title: "spring-ionic",
-    description: "O SpringIonic é uma aplicação desenvolvida com Spring Boot e Ionic que oferece uma plataforma completa para a criação de lojas virtuais. A aplicação permite o cadastro de produtos, categorias, clientes e pedidos, além de oferecer funcionalidades como busca de produtos, gerenciamento de carrinho de compras e pagamento.",
+    descriptionKey: "projects.spring-ionic.description",
     medias: [
       `${BASE_URL_PROJECTS}/spring-ionic/1-frontend-ionic-android-emulator.png`,
       `${BASE_URL_PROJECTS}/spring-ionic/frontend-ionic-android-home-page.png`,
@@ -110,8 +108,7 @@ const projectsData: Project[] = [
 
   {
     title: "webmatriculas",
-    description:
-      "O WebMatriculas é um sistema para gestão de matrículas em instituições de ensino, composto por duas partes: um frontend em React e um backend em Spring Boot. Ambos se comunicam por meio de uma API RESTful.",
+    descriptionKey: "projects.webmatriculas.description",
     medias: [
       `${BASE_URL_PROJECTS}/webmatriculas/1-frontend-react-login.png`,
       `${BASE_URL_PROJECTS}/webmatriculas/frontend-react-admin-page.png`,
@@ -135,8 +132,7 @@ const projectsData: Project[] = [
   },
   {
     title: "catalog",
-    description:
-      "O projeto Catalog é uma aplicação web desenvolvida usando o framework Spring para o backend e React para o frontend. Ele foi projetado para fornecer uma plataforma centralizada onde usuários podem gerenciar e visualizar informações sobre diversos catálogos de produtos.",
+    descriptionKey: "projects.catalog.description",
     medias: [
       `${BASE_URL_PROJECTS}/catalog/1-frontend-react-home-page.png`,
       `${BASE_URL_PROJECTS}/catalog/frontend-react-catalog.png`,
@@ -160,8 +156,7 @@ const projectsData: Project[] = [
   },
   {
     title: "dscommerce",
-    description:
-      "O DSCommerce é uma aplicação web completa desenvolvida com Spring Boot no backend e React no frontend. Ele permite a gestão de produtos, categorias, pedidos e clientes.",
+    descriptionKey: "projects.dscommerce.description",
     medias: [
       `${BASE_URL_PROJECTS}/dscommerce/1-frontend-react-home-page.png`,
       `${BASE_URL_PROJECTS}/dscommerce/frontend-react-login.png`,

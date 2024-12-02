@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
                   </div>
                   <div className="short-info">
                     <h4>{project.title}</h4>
-                    <p>{project.description}</p>
+                    <p>{t(project.descriptionKey)}</p>
                     <div className="project-links">
                       {project.repoFrontend && project.repoBackend ? (
                         <>
