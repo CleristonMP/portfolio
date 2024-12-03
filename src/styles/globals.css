@@ -123,10 +123,6 @@ h5 {
   color: var(--btn-text-dark);
 }
 
-.custom-btn span {
-  padding: 0 42px;
-}
-
 /* Modal */
 .modal-close-button {
   position: absolute;
@@ -175,6 +171,10 @@ h5 {
   .modal-close-button {
     padding: 5px;
     font-size: 0.7rem;
+  }
+
+  .custom-btn span {
+    padding: 0 42px;
   }
 }
 
