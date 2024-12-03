@@ -41,17 +41,20 @@ const Projects: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="projects-content">
-          <div className="row justify-content-center">
+        <div className="container">
+          <div className="row g-2">
             {projectsData.map((project, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
+              <div
+                className="col-lg-4 col-md-6 project-card"
+                key={index}
+                onClick={() => handleProjectClick(project)}
+              >
                 <div className="project-box">
                   <div className="single-project">
                     <img
                       src={project.medias[0]}
                       alt={project.title}
                       className="img-fluid"
-                      onClick={() => handleProjectClick(project)}
                     />
                   </div>
                   <div className="short-info">

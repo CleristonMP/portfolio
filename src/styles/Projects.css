@@ -14,6 +14,16 @@
   text-transform: uppercase;
 }
 
+.project-card {
+  cursor: pointer;
+  padding: 10px;
+  transition: all 1s ease 0s;
+}
+
+.project-card:hover {
+  box-shadow: 1px 1px 10px 10px var(--primary-shadow);
+}
+
 .project-box {
   margin-bottom: 35px;
 }

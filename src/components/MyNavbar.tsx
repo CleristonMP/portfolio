@@ -159,11 +159,11 @@ const MyNavbar: React.FC = () => {
               {sections.map((section) => (
                 <Nav.Link
                   key={section}
-                  as="div"
                   className={`mp-navlink ${
                     activeSection === section ? "active" : ""
                   }`}
                   onClick={() => handleLinkClick(section)}
+                  href={`#${section}`}
                 >
                   {t(`navigation.${section}`)}
                 </Nav.Link>
