@@ -18,10 +18,11 @@ const Skills: React.FC = () => {
   return (
     <section id="skills" className="skills-area">
       <div className="container">
-        <div className="mb-4 mb-sm-5">
-          <h2 className="text-center text-uppercase mb-0 skills-title">
+        <div className="mb-4 mb-sm-5 text-center">
+          <h2 className="text-uppercase mb-0 skills-title">
             {t("skills.title")}
           </h2>
+          <p>{t("skills.sectionDescription")}</p>
         </div>
         <div className="row justify-content-center">
           <div className="col-lg-6">

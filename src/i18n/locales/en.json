@@ -52,6 +52,7 @@
   },
   "skills": {
     "title": "Skills",
+    "sectionDescription": "A set of technologies that I use to create robust and efficient web and mobile solutions.",
     "experienceYears": "Years of Experience",
     "contact": {
       "label": "Get in touch",

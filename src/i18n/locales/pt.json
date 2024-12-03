@@ -52,6 +52,7 @@
   },
   "skills": {
     "title": "Habilidades",
+    "sectionDescription": "Um conjunto de tecnologias que utilizo para criar soluções web e mobile robustas e eficientes.",
     "experienceYears": "Anos de Experiência",
     "contact": {
       "label": "entre em contato",
