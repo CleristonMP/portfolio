@@ -10,6 +10,7 @@ type ProjectModalProps = {
   mediaUrls: string[];
   onClose: () => void;
   show: boolean;
+  autoPlay?: boolean;
 };
 
 const ProjectModal: React.FC<ProjectModalProps> = ({
@@ -17,6 +18,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
   mediaUrls,
   onClose,
   show,
+  autoPlay = false,
 }) => {
   return (
     <Modal
@@ -44,13 +46,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             const isVideo = media.endsWith(".mp4");
 
             return (
-              <Carousel.Item key={index}>
+              <Carousel.Item key={media}>
                 {isVideo ? (
                   <video
                     controls
-                    className="d-block h-auto"
+                    className="d-block h-auto carousel-video"
                     title={`${projectTitle} - Video ${index + 1}`}
-                    autoPlay
+                    autoPlay={autoPlay}
                     controlsList="nodownload noremoteplayback"
                   >
                     <source src={media} type="video/mp4" />

@@ -24,6 +24,9 @@
     "audience-counter": {
       "description": "O Audience Counter é um aplicativo desenvolvido para contar o público em eventos, oferecendo dois tipos de contagem: contagem direta e contagem por fileiras. Ele foi projetado para facilitar a contagem e registro da assistência de forma eficiente e precisa, com opções para salvar, visualizar e gerenciar as contagens salvas."
     },
+    "audio-transcriber": {
+      "description": "O Audio Transcriber é um aplicativo desenvolvido para transcrever áudios, utilizando a API Google Speech To Text. Ele permite que os usuários façam upload de arquivos de áudio e obtenham a transcrição correspondente ou que gravem um áudio utilizando o microfone de seu dispositivo, facilitando o acesso e a compreensão do conteúdo falado."
+    },
     "spring-ionic": {
       "description": "O SpringIonic é uma aplicação desenvolvida com Spring Boot e Ionic que oferece uma plataforma completa para a criação de lojas virtuais. A aplicação permite o cadastro de produtos, categorias, clientes e pedidos, além de oferecer funcionalidades como busca de produtos, gerenciamento de carrinho de compras e pagamento."
     },

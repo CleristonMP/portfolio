@@ -53,19 +53,45 @@ const projectsData: Project[] = [
   {
     title: "audience-counter",
     descriptionKey: "projects.audience-counter.description",
-      medias: [
-        `${BASE_URL_PROJECTS}/audience-counter/1-direct-count-view.jpg`,
-        `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-view.jpg`,
-        `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-view-1.png`,
-        `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-view-2.png`,
-        `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-view-1.png`,
-        `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-view-2.png`,
-        `${BASE_URL_PROJECTS}/audience-counter/audience-counter-app-video.mp4`,
-        `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-video.mp4`,
-        `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-video.mp4`,
-      ],
-      githubLink: "https://github.com/CleristonMP/audience-counter"
+    medias: [
+      `${BASE_URL_PROJECTS}/audience-counter/1-direct-count-view.jpg`,
+      `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-view.jpg`,
+      `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-view-1.png`,
+      `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-view-2.png`,
+      `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-view-1.png`,
+      `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-view-2.png`,
+      `${BASE_URL_PROJECTS}/audience-counter/audience-counter-app-video.mp4`,
+      `${BASE_URL_PROJECTS}/audience-counter/direct-count-landscape-video.mp4`,
+      `${BASE_URL_PROJECTS}/audience-counter/counting-by-rows-landscape-video.mp4`,
+    ],
+    githubLink: "https://github.com/CleristonMP/audience-counter"
   },
+  {
+    title: "Audio Transcriber",
+    descriptionKey: "projects.audio-transcriber.description",
+    medias: [
+      `${BASE_URL_PROJECTS}/audio-transcriber/1-audio-transcriber-mobile-app-home.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-recording.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-home-help.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-transcription-screen.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-transcription-screen-help.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-saved-transcriptions-screen.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/audio-transcriber-mobile-app-saved-transcription-screen-help.jpeg`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/app-audio-transcriber-video.mp4`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/backend-node-express-audio-transcriber-app.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-home.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-home-help.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-drawer-navbar.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-transcription-screen.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-saving-edited-transcription.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-transcription-screen-help.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-saved-transcriptions-screen.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-saved-transcriptions-screen-help.png`,
+      `${BASE_URL_PROJECTS}/audio-transcriber/frontend-web-audio-transcriber-app-video.mp4`
+    ],
+    githubLink: "https://github.com/CleristonMP/audio-transcriber-app"
+  },
+
   {
     title: "spring-ionic",
     descriptionKey: "projects.spring-ionic.description",

@@ -24,6 +24,9 @@
     "audience-counter": {
       "description": "The Audience Counter is an application developed to count the audience at events, offering two counting methods: direct counting and row counting. It was designed to facilitate efficient and accurate counting and registration of attendance, with options to save, view, and manage saved counts."
     },
+    "audio-transcriber": {
+      "description": "Audio Transcriber is an application developed to transcribe audio, using the Google Speech To Text API. It allows users to upload audio files and obtain the corresponding transcription or to record audio using their device's microphone, facilitating access and understanding of spoken content."
+    },
     "spring-ionic": {
       "description": "SpringIonic is an application developed with Spring Boot and Ionic that offers a complete platform for creating online stores. The application allows the registration of products, categories, customers, and orders, as well as offering features such as product search, shopping cart management, and payment."
     },

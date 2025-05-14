@@ -14,6 +14,12 @@
   padding: 0 20px;
 }
 
+.carousel-video {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+}
+
 .project-caption {
   display: none;
   text-align: center;
